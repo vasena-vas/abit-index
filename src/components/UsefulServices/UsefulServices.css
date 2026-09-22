@@ -1,0 +1,646 @@
+.useful-services-section {
+    margin-bottom: 60px;
+    padding: 50px 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Стили заголовка как в ContactForm */
+.services-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    text-align: left;
+    padding: 0 40px;
+}
+
+.services-main-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 0;
+    border: none;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.services-subtitle {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin: 0;
+    line-height: 1.4;
+    flex: 1;
+}
+
+/* Используем 4 колонки - карточки прижаты к краям */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 0;
+    align-items: stretch;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Большая карточка занимает 2 колонки */
+.service-card-large {
+    grid-column: span 2;
+}
+
+/* Маленькие карточки занимают 1 колонку */
+.service-card {
+    grid-column: span 1;
+}
+
+/* Общие стили для всех карточек */
+.service-card {
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Стили для больших синих карточек с картинкой */
+.service-card-large.service-card-blue {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    position: relative;
+    overflow: visible;
+}
+
+.service-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: 1;
+}
+
+.service-card-image {
+    flex-shrink: 0;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -20px -10px -20px 0;
+}
+
+.service-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Синяя карточка */
+.service-card-blue {
+    border: 1px solid #9EA5DD;
+    background: #F4F4F8;
+    box-shadow: 0 4px 10px 0 rgba(50, 60, 141, 0.10);
+}
+
+.service-card-blue .service-title {
+    color: #323C8D;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    line-height: 1.3;
+}
+
+/* Новые стили для описания в синей карточке */
+.service-card-blue .service-description {
+    color: #666;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0 0 20px 0;
+    flex: 1;
+}
+
+/* Красная карточка */
+.service-card-red {
+    border: 1px solid #E31E24;
+    background: white;
+    box-shadow: 0 4px 10px 0 rgba(227, 30, 36, 0.10);
+}
+
+.service-card-red .service-title {
+    color: #E31E24;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+}
+
+/* Новые стили для описания в красной карточке */
+.service-card-red .service-description {
+    color: #666;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0 0 20px 0;
+    flex: 1;
+}
+
+/* Зеленая карточка */
+.service-card-green {
+    border: 1px solid #DFF2CE;
+    background: #F8F9F7;
+    box-shadow: 0 4px 10px 0 rgba(139, 164, 116, 0.10);
+}
+
+.service-card-green .service-title {
+    color: #8BA474;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+}
+
+/* Новые стили для описания в зеленой карточке */
+.service-card-green .service-description {
+    color: #666;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0 0 20px 0;
+    flex: 1;
+}
+
+/* Кнопки - уменьшен размер шрифта до 12px */
+.service-button {
+    padding: 10px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: fit-content;
+    min-height: 36px;
+    border: none;
+    margin-top: auto;
+}
+
+.service-button-red {
+    background-color: #E31E24;
+    color: white;
+}
+
+.service-button-red:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(227, 30, 36, 0.2);
+}
+
+.service-button-green {
+    background-color: #8BA474;
+    color: white;
+}
+
+.service-button-green:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 164, 116, 0.2);
+}
+
+.service-button-white {
+    background-color: #323C8D;
+    color: white;
+    width: 50px;
+    justify-content: center;
+}
+
+.service-button-white:hover {
+    background-color: #232b66;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(50, 60, 141, 0.2);
+}
+
+.service-button-outline-green {
+    background-color: transparent;
+    border: 2px solid #8BA474;
+    color: #8BA474;
+    font-size: 12px;
+    padding: 8px 14px;
+}
+
+.service-button-outline-green:hover {
+    background-color: rgba(139, 164, 116, 0.1);
+    transform: translateY(-2px);
+}
+
+.service-button-outline-red {
+    background-color: transparent;
+    border: 2px solid #E31E24;
+    color: #E31E24;
+    font-size: 12px;
+    padding: 8px 14px;
+}
+
+.service-button-outline-red:hover {
+    background-color: rgba(227, 30, 36, 0.05);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(227, 30, 36, 0.1);
+}
+
+.service-button-blue-outline {
+    background-color: transparent;
+    border: 2px solid #323C8D;
+    color: #323C8D;
+    font-size: 12px;
+    padding: 8px 14px;
+}
+
+.service-button-blue-outline:hover {
+    background-color: rgba(50, 60, 141, 0.05);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(50, 60, 141, 0.1);
+}
+
+.service-button-link-green {
+    background-color: transparent;
+    border: none;
+    color: #8BA474;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.service-button-link-green:hover {
+    opacity: 0.7;
+    transform: none;
+}
+
+.service-buttons-group {
+    display: flex;
+    gap: 16px;
+    margin-top: auto;
+    flex-wrap: wrap;
+}
+
+.service-buttons-group .service-button {
+    margin-top: 0;
+}
+
+/* Убираем дублирование стилей для больших карточек */
+.service-card-large.service-card-blue,
+.service-card-large.service-card-red,
+.service-card-large.service-card-green {
+    grid-column: span 2;
+}
+
+/* ========== АДАПТИВНОСТЬ ========== */
+
+/* Ноутбуки (1200px - 1300px) - уменьшаем отступы */
+@media (max-width: 1300px) {
+    .services-grid {
+        gap: 25px;
+        padding: 0;
+    }
+
+    .services-header {
+        padding: 0 30px;
+    }
+
+    .service-card {
+        padding: 25px;
+    }
+
+    .service-card-image {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+/* Планшеты (1024px - 1200px) - переключаем на 2 колонки */
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 0;
+    }
+
+    .service-card-large {
+        grid-column: span 2;
+    }
+
+    .service-card {
+        grid-column: span 1;
+    }
+}
+
+/* Планшеты (768px - 1024px) */
+@media (max-width: 1024px) {
+    .services-header {
+        gap: 20px;
+        padding: 0 25px;
+    }
+
+    .services-main-title {
+        font-size: 22px;
+        white-space: normal;
+    }
+
+    .services-subtitle {
+        font-size: 14px;
+    }
+
+    .services-grid {
+        padding: 0;
+        gap: 20px;
+    }
+
+    .service-card-blue .service-title {
+        font-size: 22px;
+    }
+
+    .service-card-red .service-title,
+    .service-card-green .service-title {
+        font-size: 20px;
+    }
+
+    .service-card-large.service-card-blue {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-card-image {
+        width: 140px;
+        height: 140px;
+        margin: 15px 0 0 0;
+    }
+
+    .service-button {
+        align-self: center;
+    }
+}
+
+/* Маленькие экраны (768px) - 1 колонка */
+@media (max-width: 768px) {
+    .useful-services-section {
+        padding: 35px 0;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .services-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 0 20px;
+    }
+
+    .services-main-title {
+        font-size: 24px;
+        white-space: normal;
+    }
+
+    .services-subtitle {
+        font-size: 14px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .service-card-large {
+        grid-column: span 1 !important;
+    }
+
+    .service-card {
+        grid-column: span 1;
+    }
+
+    .service-card {
+        padding: 25px;
+    }
+
+    .service-card-blue .service-title {
+        font-size: 20px;
+    }
+
+    .service-card-red .service-title,
+    .service-card-green .service-title {
+        font-size: 18px;
+    }
+
+    .service-description {
+        font-size: 10px;
+        margin-bottom: 15px;
+    }
+
+    .service-buttons-group {
+        flex-direction: column;
+    }
+
+    .service-buttons-group .service-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .service-card-large.service-card-blue {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-card-image {
+        width: 130px;
+        height: 130px;
+        margin: 15px 0 0 0;
+    }
+
+    .service-button {
+        padding: 8px 14px;
+        font-size: 12px;
+        min-height: 34px;
+    }
+}
+
+/* Мобильные телефоны (480px) */
+@media (max-width: 480px) {
+    .useful-services-section {
+        padding: 30px 0;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .services-header {
+        padding: 0 15px;
+    }
+
+    .services-main-title {
+        font-size: 20px;
+    }
+
+    .services-subtitle {
+        font-size: 14px;
+    }
+
+    .services-grid {
+        padding: 0;
+        gap: 15px;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+
+    .service-card-blue .service-title {
+        font-size: 18px;
+    }
+
+    .service-card-red .service-title,
+    .service-card-green .service-title {
+        font-size: 16px;
+    }
+
+    .service-description {
+        font-size: 10px;
+    }
+
+    .service-button {
+        width: 100%;
+        padding: 8px 14px;
+        font-size: 12px;
+        min-height: 34px;
+    }
+
+    .service-card-image {
+        width: 100px;
+        height: 100px;
+        margin: 15px 0 0 0;
+    }
+
+    .service-button-blue-outline,
+    .service-button-outline-red,
+    .service-button-outline-green {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+}
+
+/* Очень маленькие экраны (375px) */
+@media (max-width: 375px) {
+    .services-header {
+        padding: 0 12px;
+    }
+
+    .services-main-title {
+        font-size: 18px;
+    }
+
+    .services-subtitle {
+        font-size: 14px;
+    }
+
+    .services-grid {
+        padding: 0;
+        gap: 12px;
+    }
+
+    .service-card {
+        padding: 18px;
+    }
+
+    .service-card-blue .service-title {
+        font-size: 16px;
+    }
+
+    .service-card-red .service-title,
+    .service-card-green .service-title {
+        font-size: 15px;
+    }
+
+    .service-description {
+        font-size: 9px;
+    }
+
+    .service-button {
+        padding: 7px 10px;
+        font-size: 11px;
+    }
+
+    .service-card-image {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* iPhone 5/SE (320px) */
+@media (max-width: 340px) {
+    .services-header {
+        padding: 0 10px;
+    }
+
+    .services-main-title {
+        font-size: 16px;
+    }
+
+    .services-subtitle {
+        font-size: 14px;
+    }
+
+    .services-grid {
+        padding: 0;
+        gap: 10px;
+    }
+
+    .service-card {
+        padding: 15px;
+    }
+
+    .service-card-blue .service-title {
+        font-size: 15px;
+    }
+
+    .service-card-red .service-title,
+    .service-card-green .service-title {
+        font-size: 14px;
+    }
+
+    .service-description {
+        font-size: 9px;
+    }
+
+    .service-button {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+
+    .service-card-image {
+        width: 70px;
+        height: 70px;
+    }
+}

@@ -1,0 +1,292 @@
+/* Header Styles */
+.header {
+    background-color: rgba(255, 255, 255, 1);
+    width: 100%;
+}
+
+/* Верхняя строка десктопной версии */
+.header-top {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    gap: 20px;
+}
+
+/* Поиск */
+.search-container {
+    flex-shrink: 0;
+    width: 220px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 13px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: #999;
+    font-style: normal;
+    font-size: 13px;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #8BA474;
+    box-shadow: 0 0 0 2px rgba(139, 164, 116, 0.1);
+}
+
+/* Контактная информация */
+.header-contact {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.hotline, .email {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.hotline-label, .email-label {
+    color: #666;
+    font-weight: 500;
+}
+
+.hotline-number, .email-address {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Кнопки - одинаковой высоты и длины */
+.application-btn,
+.pre-registration-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 4.945px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    min-width: 200px;
+    height: 48px;
+}
+
+/* Кнопка "Подать заявление" */
+.application-btn {
+    border: 1.648px solid #323C8D;
+    background: #FFF;
+}
+
+.application-btn span {
+    color: #282A29;
+    font-family: Montserrat;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 12.869px;
+    white-space: nowrap;
+}
+
+/* Увеличенная картинка у первой кнопки в 1.5 раза (было 20px, стало 30px) */
+.application-btn .btn-icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+.application-btn:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Кнопка "предварительная запись" - строчные буквы */
+.pre-registration-btn {
+    border: 1.648px solid #323C8D;
+    background: #323C8D;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+}
+
+/* Картинка у второй кнопки - приподнята вверх */
+.pre-registration-btn .pre-btn-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    position: relative;
+    top: -3px;
+}
+
+.pre-registration-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.pre-registration-line1 {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 9.889px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 12.869px;
+    white-space: nowrap;
+}
+
+.pre-registration-line2 {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 9.889px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 12.869px;
+    white-space: nowrap;
+}
+
+.pre-registration-btn:hover {
+    background-color: #232b66;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(50, 60, 141, 0.3);
+}
+
+/* ========== МОБИЛЬНАЯ ВЕРСИЯ ========== */
+.header-mobile {
+    display: none;
+}
+
+.mobile-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mobile-logo {
+    max-width: 50px;
+    height: auto;
+}
+
+.mobile-menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-icon span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle.active .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle.active .menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Адаптивность для десктопа */
+@media (max-width: 1150px) {
+    .header-content {
+        padding: 0 30px;
+        gap: 15px;
+    }
+
+    .search-container {
+        width: 180px;
+    }
+
+    .header-contact {
+        gap: 12px;
+    }
+
+    .hotline, .email {
+        font-size: 11px;
+    }
+
+    .application-btn,
+    .pre-registration-btn {
+        min-width: 170px;
+        height: 44px;
+        padding: 6px 12px;
+    }
+
+    .application-btn span {
+        font-size: 10px;
+    }
+
+    /* Увеличенная картинка на адаптиве (было 16px, стало 24px) */
+    .application-btn .btn-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Картинка у второй кнопки на адаптиве */
+    .pre-registration-btn .pre-btn-icon {
+        width: 19px;
+        height: 19px;
+        top: -6px;
+    }
+
+    .pre-registration-line1,
+    .pre-registration-line2 {
+        font-size: 8.5px;
+        line-height: 11px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header-top {
+        display: none;
+    }
+
+    .header-mobile {
+        display: block;
+    }
+}

@@ -1,0 +1,225 @@
+/* Контейнер как в UsefulServices */
+.submission-container {
+    margin: 40px 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/* Заголовок как в UsefulServices */
+.submission-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    text-align: left;
+    padding: 0 40px;
+}
+
+.submission-main-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 0;
+    border: none;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.submission-subtitle {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin: 0;
+    line-height: 1.4;
+    flex: 1;
+}
+
+/* Сетка карточек */
+.submission-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.submission-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    border: 2px solid;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.submission-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.submission-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+}
+
+/* Новые стили для описания */
+.submission-description {
+    color: #656565;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+}
+
+/* Кнопки одинаковой длины */
+.submission-button {
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 40px;
+    margin-top: auto;
+}
+
+.submission-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .submission-header {
+        gap: 20px;
+        padding: 0 30px;
+    }
+
+    .submission-main-title {
+        font-size: 22px;
+        white-space: normal;
+    }
+
+    .submission-subtitle {
+        font-size: 14px;
+    }
+
+    .submission-card {
+        padding: 20px;
+    }
+
+    .submission-title {
+        font-size: 20px;
+    }
+
+    .submission-description {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .submission-button {
+        padding: 8px 14px;
+        font-size: 13px;
+        min-height: 38px;
+    }
+}
+
+@media (max-width: 768px) {
+    .submission-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 0 20px;
+    }
+
+    .submission-main-title {
+        font-size: 24px;
+        white-space: normal;
+    }
+
+    .submission-subtitle {
+        font-size: 14px;
+    }
+
+    .submission-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .submission-card {
+        padding: 20px;
+    }
+
+    .submission-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .submission-description {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .submission-button {
+        padding: 8px 14px;
+        font-size: 13px;
+        min-height: 38px;
+    }
+}
+
+@media (max-width: 480px) {
+    .submission-header {
+        padding: 0 15px;
+    }
+
+    .submission-main-title {
+        font-size: 20px;
+    }
+
+    .submission-subtitle {
+        font-size: 14px;
+    }
+
+    .submission-grid {
+        padding: 0 15px;
+        gap: 15px;
+    }
+
+    .submission-card {
+        padding: 18px;
+    }
+
+    .submission-title {
+        font-size: 18px;
+    }
+
+    .submission-description {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .submission-button {
+        padding: 7px 12px;
+        font-size: 12px;
+        min-height: 35px;
+    }
+}
