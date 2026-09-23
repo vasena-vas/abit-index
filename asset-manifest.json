@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/abit-index/static/css/main.4fceaa29.css",
+    "main.js": "/abit-index/static/js/main.242c45c6.js",
+    "static/js/453.b9e7092d.chunk.js": "/abit-index/static/js/453.b9e7092d.chunk.js",
+    "index.html": "/abit-index/index.html",
+    "main.4fceaa29.css.map": "/abit-index/static/css/main.4fceaa29.css.map",
+    "main.242c45c6.js.map": "/abit-index/static/js/main.242c45c6.js.map",
+    "453.b9e7092d.chunk.js.map": "/abit-index/static/js/453.b9e7092d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4fceaa29.css",
+    "static/js/main.242c45c6.js"
+  ]
+}
